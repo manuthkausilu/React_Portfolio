@@ -3,20 +3,51 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { FiSend, FiUser, FiMail, FiMessageCircle, FiBookOpen } from "react-icons/fi";
 
+// Custom Message Box (alert() වෙනුවට)
+const showMessageBox = (message, isError = false) => {
+  const messageBox = document.createElement('div');
+  messageBox.className = `fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-lg shadow-lg text-white font-bold z-[9999] transition-opacity duration-300 ${isError ? 'bg-red-600' : 'bg-green-600'}`;
+  messageBox.textContent = message;
+  document.body.appendChild(messageBox);
+
+  setTimeout(() => {
+    messageBox.classList.add('opacity-0');
+    messageBox.addEventListener('transitionend', () => messageBox.remove());
+  }, 3000); // Message එක තත්පර 3කට පස්සේ අයින් වෙනවා
+};
+
 function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Environment variables හරියට load වෙලාද කියලා බලන්න
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const secretKey = import.meta.env.VITE_EMAILJS_SECRET_KEY; // මේක තමයි Secret Key එක
+
+    if (!serviceID || !templateID || !secretKey) {
+      showMessageBox("Email service not configured. Missing Environment Variables.", true);
+      console.error("EmailJS environment variables are not defined. Check your .env file and Vercel settings.");
+      return;
+    }
+
     emailjs
-      .sendForm("service_xa19gum", "template_qewprog", form.current, "hkfGJPoqq6VObvvU5")
+      .sendForm(
+        serviceID,
+        templateID,
+        form.current,
+        secretKey // මෙතන තමයි secret key එක පාවිච්චි වෙන්නේ
+      )
       .then(
         () => {
-          alert("Message sent successfully!");
+          showMessageBox("Message sent successfully!");
           form.current.reset();
         },
         (error) => {
-          alert("Failed to send message. Please try again later.", error.text);
+          showMessageBox("Failed to send message. Please try again later.", true);
+          console.error("Email sending failed:", error.text);
         }
       );
   };
@@ -49,6 +80,7 @@ function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true }}
           >
             Reach out for collaborations, questions, or just to say hello. I'm always open to new opportunities and connections!
           </motion.p>
