@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiFolder, FiMail } from "react-icons/fi";
-import bg2 from "../assets/videos/bg3.mp4";
+import bg3 from "../assets/videos/bg3.mp4";
 
 export default function Hero() {
   const [hovered, setHovered] = useState(null);
@@ -40,7 +40,7 @@ export default function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src={bg2} type="video/mp4" />
+        <source src={bg3} type="video/mp4" />
       </video>
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
@@ -84,6 +84,14 @@ export default function Hero() {
           <motion.button
             onMouseEnter={() => setHovered("work")}
             onMouseLeave={() => setHovered(null)}
+            onClick={() => {
+              const el = document.getElementById("project");
+              if (el) {
+                const yOffset = -72;
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
             className={`px-6 py-3 rounded-full text-lg font-medium shadow flex items-center gap-2 min-w-[140px] min-h-[48px] transition-colors
               ${
                 hovered === "work"
@@ -102,6 +110,14 @@ export default function Hero() {
           <motion.button
             onMouseEnter={() => setHovered("contact")}
             onMouseLeave={() => setHovered(null)}
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                const yOffset = -72;
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
             className={`px-6 py-3 rounded-full text-lg font-medium shadow flex items-center gap-2 min-w-[140px] min-h-[48px] transition-colors
               ${
                 hovered === "contact"

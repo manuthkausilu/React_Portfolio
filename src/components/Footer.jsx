@@ -23,25 +23,25 @@ const navItems = [
 
 const socialLinks = [
   {
-    href: "https://github.com/",
+    href: "https://github.com/manuthkausilu",
     icon: <FaGithub />,
     label: "GitHub",
     color: "hover:text-white hover:bg-gray-800",
   },
   {
-    href: "https://linkedin.com/",
+    href: "https://www.linkedin.com/in/manuth-kausilu-732535316/",
     icon: <FaLinkedin />,
     label: "LinkedIn",
     color: "hover:text-white hover:bg-blue-700",
   },
   {
-    href: "mailto:your@email.com",
+    href: "#contact",
     icon: <FaEnvelope />,
     label: "Email",
     color: "hover:text-white hover:bg-green-700",
   },
   {
-    href: "https://facebook.com/",
+    href: "https://www.facebook.com/manuth.kausilu.35",
     icon: <FaFacebook />,
     label: "Facebook",
     color: "hover:text-white hover:bg-blue-600",

@@ -102,11 +102,11 @@ function Contact() {
             <div className="flex flex-col gap-2 text-gray-700 text-base">
               <div className="flex items-center gap-2">
                 <FiMail className="text-xl text-blue-600" />
-                <span>manuth@email.com</span>
+                <span>manuthkausilu20031018@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <FiBookOpen className="text-xl text-green-600" />
-                <span>Colombo, Sri Lanka</span>
+                <span>Horana, Sri Lanka</span>
               </div>
             </div>
           </motion.div>

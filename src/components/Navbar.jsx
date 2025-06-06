@@ -24,35 +24,45 @@ const Navbar = () => {
       <a
         href="#about"
         onClick={(e) => handleSmoothScroll(e, "about", setMenuOpen)}
-        className="text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline"
+        className="group relative text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-3/4"
+        style={{ overflow: "hidden" }}
       >
         About
       </a>
       <a
         href="#education"
         onClick={(e) => handleSmoothScroll(e, "education", setMenuOpen)}
-        className="text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline"
+        className="group relative text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-3/4"
+        style={{ overflow: "hidden" }}
       >
         Education
       </a>
       <a
         href="#skill"
         onClick={(e) => handleSmoothScroll(e, "skill", setMenuOpen)}
-        className="text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline"
+        className="group relative text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-3/4"
+        style={{ overflow: "hidden" }}
       >
         Skill
       </a>
       <a
         href="#project"
         onClick={(e) => handleSmoothScroll(e, "project", setMenuOpen)}
-        className="text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline"
+        className="group relative text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-3/4"
+        style={{ overflow: "hidden" }}
       >
         Projects
       </a>
       <a
         href="#contact"
         onClick={(e) => handleSmoothScroll(e, "contact", setMenuOpen)}
-        className="text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline"
+        className="group relative text-white transition-colors hover:text-black hover:bg-white hover:rounded-full px-3 py-1 block lg:inline
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-3/4"
+        style={{ overflow: "hidden" }}
       >
         Contact
       </a>
@@ -106,7 +116,11 @@ const Navbar = () => {
         <motion.button
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          onClick={() => setClicked((prev) => !prev)}
+          onClick={(e) => {
+            setClicked(true);
+            handleSmoothScroll(e, "contact");
+            setTimeout(() => setClicked(false), 500); // Reset arrow after 0.5s
+          }}
           whileHover={{
             scale: 1.08,
             backgroundColor: "#fff",

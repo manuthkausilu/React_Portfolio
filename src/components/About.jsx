@@ -14,7 +14,6 @@ const techServices = [
   "SEO Optimization",
   "Automation",
   "AI Solutions",
-  "Consulting",
 ];
 
 function About() {
@@ -159,16 +158,16 @@ function About() {
           </motion.a>
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-start gap-5 mt-8">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="group text-gray-500 hover:text-black transition text-2xl rounded-full p-2">
+            <a href="https://github.com/manuthkausilu" target="_blank" rel="noopener noreferrer" className="group text-gray-500 hover:text-black transition text-2xl rounded-full p-2">
               <FaGithub className="group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-200" />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="group text-gray-500 hover:text-blue-700 transition text-2xl rounded-full p-2">
+            <a href="https://www.linkedin.com/in/manuth-kausilu-732535316/" target="_blank" rel="noopener noreferrer" className="group text-gray-500 hover:text-blue-700 transition text-2xl rounded-full p-2">
               <FaLinkedin className="group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-200" />
             </a>
-            <a href="mailto:your@email.com" className="group text-gray-500 hover:text-green-700 transition text-2xl rounded-full p-2">
+            <a href="#contact" className="group text-gray-500 hover:text-green-700 transition text-2xl rounded-full p-2">
               <FaEnvelope className="group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-200" />
             </a>
-            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="group text-gray-500 hover:text-blue-600 transition text-2xl rounded-full p-2">
+            <a href="https://www.facebook.com/manuth.kausilu.35" target="_blank" rel="noopener noreferrer" className="group text-gray-500 hover:text-blue-600 transition text-2xl rounded-full p-2">
               <FaFacebook className="group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-200" />
             </a>
           </div>
