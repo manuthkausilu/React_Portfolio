@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiFolder, FiMail } from "react-icons/fi";
-import bg2 from "../assets/videos/bg2.mp4";
+import bg2 from "../assets/videos/bg3.mp4";
 
 export default function Hero() {
   const [hovered, setHovered] = useState(null);
