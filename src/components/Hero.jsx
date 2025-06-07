@@ -26,9 +26,16 @@ export default function Hero() {
     updateTime();
     const interval = setInterval(updateTime, 1000);
     // Loading animation: hide when window is loaded
-    const handleLoad = () => setLoading(false);
+    const handleLoad = () => {
+      const elapsed = Date.now() - start;
+      const remaining = minLoadingTime - elapsed;
+      setTimeout(() => setLoading(false), remaining > 0 ? remaining : 0);
+    };
+    // Show loading animation for at least 2 seconds
+    const minLoadingTime = 2000;
+    const start = Date.now();
     if (document.readyState === "complete") {
-      setLoading(false);
+      handleLoad();
     } else {
       window.addEventListener("load", handleLoad);
     }
@@ -40,8 +47,47 @@ export default function Hero() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-white"></div>
+      <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800">
+        <div className="relative flex items-center justify-center mb-6">
+          <span className="absolute inline-flex h-20 w-20 rounded-full bg-gradient-to-tr from-black via-gray-700 to-white opacity-30 animate-pulse"></span>
+          <svg className="animate-spin h-14 w-14" viewBox="0 0 50 50">
+            <circle
+              className="opacity-20"
+              cx="25"
+              cy="25"
+              r="20"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="6"
+            />
+            <circle
+              className="origin-center"
+              cx="25"
+              cy="25"
+              r="20"
+              fill="none"
+              stroke="url(#projectGradient)"
+              strokeWidth="6"
+              strokeDasharray="100"
+              strokeDashoffset="60"
+            />
+            <defs>
+              <linearGradient id="projectGradient" x1="0" y1="0" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#fff" />
+                <stop offset="0.5" stopColor="#222" />
+                <stop offset="1" stopColor="#000" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-white text-xl font-semibold tracking-wide"
+        >
+          Loading your experience...
+        </motion.div>
       </div>
     );
   }
