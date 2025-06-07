@@ -47,9 +47,9 @@ export default function Hero() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800">
+      <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black">
         <div className="relative flex items-center justify-center mb-6">
-          <span className="absolute inline-flex h-20 w-20 rounded-full bg-gradient-to-tr from-black via-gray-700 to-white opacity-30 animate-pulse"></span>
+          <span className="absolute inline-flex h-20 w-20 rounded-full bg-white opacity-10 animate-pulse"></span>
           <svg className="animate-spin h-14 w-14" viewBox="0 0 50 50">
             <circle
               className="opacity-20"
@@ -66,15 +66,14 @@ export default function Hero() {
               cy="25"
               r="20"
               fill="none"
-              stroke="url(#projectGradient)"
+              stroke="url(#bwGradient)"
               strokeWidth="6"
               strokeDasharray="100"
               strokeDashoffset="60"
             />
             <defs>
-              <linearGradient id="projectGradient" x1="0" y1="0" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+              <linearGradient id="bwGradient" x1="0" y1="0" x2="50" y2="50" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#fff" />
-                <stop offset="0.5" stopColor="#222" />
                 <stop offset="1" stopColor="#000" />
               </linearGradient>
             </defs>
