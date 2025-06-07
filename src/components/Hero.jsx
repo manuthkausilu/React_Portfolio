@@ -6,6 +6,7 @@ import bg3 from "../assets/videos/bg3.mp4";
 export default function Hero() {
   const [hovered, setHovered] = useState(null);
   const [currentTime, setCurrentTime] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const updateTime = () => {
@@ -24,8 +25,26 @@ export default function Hero() {
     };
     updateTime();
     const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
+    // Loading animation: hide when window is loaded
+    const handleLoad = () => setLoading(false);
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-white"></div>
+      </div>
+    );
+  }
 
   return (
     <section
