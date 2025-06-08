@@ -85,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-white text-xl font-semibold tracking-wide"
         >
-          Loading your experience...
+          Please wait, portfolio is loading...
         </motion.div>
       </div>
     );
@@ -103,6 +103,8 @@ export default function Hero() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        preload="auto" // <--- Add this attribute for faster loading
+        poster="/placeholder.jpg" // <--- Optional: add a lightweight placeholder image in public/
       >
         <source src={bg3} type="video/mp4" />
       </video>
@@ -206,9 +208,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7, type: "spring" }}
         >
-          {/* Left Side */}
+          {/* Left Side - hide on mobile */}
           <div
-            className="flex flex-col items-start justify-center bg-white/10 rounded-xl px-3 sm:px-5 md:px-7 lg:px-10 py-3 sm:py-4 min-w-[120px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px] shadow md:items-start md:justify-center md:text-left"
+            className="hidden md:flex flex-col items-start justify-center bg-white/10 rounded-xl px-3 sm:px-5 md:px-7 lg:px-10 py-3 sm:py-4 min-w-[120px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px] shadow md:items-start md:justify-center md:text-left"
             data-aos="fade-up-right"
             data-aos-delay="300"
           >
@@ -219,9 +221,9 @@ export default function Hero() {
               {currentTime} GMT+5:30
             </p>
           </div>
-          {/* Right Side */}
+          {/* Right Side - hide on mobile */}
           <div
-            className="flex flex-col items-end justify-center bg-white/10 rounded-xl px-3 sm:px-5 md:px-7 lg:px-10 py-3 sm:py-4 min-w-[120px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px] shadow md:items-end md:justify-center md:text-right"
+            className="hidden md:flex flex-col items-end justify-center bg-white/10 rounded-xl px-3 sm:px-5 md:px-7 lg:px-10 py-3 sm:py-4 min-w-[120px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px] shadow md:items-end md:justify-center md:text-right"
             data-aos="fade-up-left"
             data-aos-delay="300"
           >

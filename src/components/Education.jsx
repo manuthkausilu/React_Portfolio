@@ -48,7 +48,7 @@ const Education = () => {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-black via-gray-700 to-gray-400 bg-clip-text text-transparent tracking-widest uppercase mb-2">
           My Learning & Academic Journey
@@ -62,21 +62,21 @@ const Education = () => {
           A timeline of my academic background, bootcamps, and key learning milestones.
         </motion.p>
       </motion.div>
-      <div className="max-w-4xl mx-auto flex flex-col gap-10 relative">
+      <div className="max-w-4xl mx-auto flex flex-col gap-10 relative items-center">
         {/* Roadmap vertical line */}
         <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-blue-400 via-pink-300 to-yellow-200 opacity-30 -translate-x-1/2 z-0 rounded-full"></div>
         {educationData.map((edu, idx) => (
           <motion.div
             key={edu.degree}
             className={`group flex flex-col md:flex-row items-center gap-6 bg-white/90 rounded-2xl shadow-2xl border border-gray-200 p-8 hover:shadow-blue-200 transition-shadow duration-300 relative overflow-hidden
-              ${idx % 2 === 0 ? "md:self-start md:mr-auto" : "md:self-end md:ml-auto"} z-10`}
+              ${idx % 2 === 0 ? "md:self-start md:mr-auto" : "md:self-end md:ml-auto"} z-10 w-full md:w-[520px]`}
             variants={cardVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.7, delay: idx * 0.18, type: "spring" }}
             whileHover={{ scale: 1.025, boxShadow: "0 8px 32px 0 rgba(0, 123, 255, 0.15)" }}
-            style={{ width: "90%", maxWidth: 520 }}
+            style={{ maxWidth: 520 }}
           >
             {/* Roadmap dot */}
             <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 ${idx % 2 === 0 ? "-right-6" : "-left-6"} z-20`}>

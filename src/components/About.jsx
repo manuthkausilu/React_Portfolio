@@ -87,10 +87,10 @@ function About() {
         {/* Profile Image with animation and ring */}
         <motion.div
           className="relative w-[380px] h-[380px] flex-shrink-0 flex items-center justify-center"
-          initial={{ opacity: 0, scale: 0.7, x: -60 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, type: "spring" }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.5 }}
         >
           <motion.div
             className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-400 via-pink-300 to-yellow-200 shadow-2xl"
@@ -107,21 +107,20 @@ function About() {
             transition={{ duration: 1, delay: 0.2, type: "spring" }}
           />
         </motion.div>
-
         {/* About Content */}
         <motion.div
           className="w-full max-w-2xl text-center md:text-left bg-white/90 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-gray-200"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2, type: "spring" }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <motion.h2
             className="text-2xl font-semibold text-black mb-2 tracking-widest flex items-center gap-2 uppercase"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <span className="inline-block text-3xl text-black">
               <FiArrowRight />
@@ -133,7 +132,7 @@ function About() {
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             style={{ transformOrigin: "left" }}
           />
           <motion.p
@@ -141,14 +140,14 @@ function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             I'm <span className="font-bold text-black">Manuth Kausilu</span>, a passionate and dedicated software enthusiast with a strong interest in full-stack development. I enjoy turning ideas into functional and user-friendly digital experiences. My expertise covers modern web technologies, UI/UX, cloud, and automation.
           </motion.p>
           <motion.a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full font-semibold shadow transition text-lg tracking-wide group hover:bg-white hover:text-black"
-            whileHover={{ scale: 1.07, backgroundColor: "#fff", color: "#000" }}
+            className="inline-flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full font-semibold shadow transition text-lg tracking-wide group hover:bg-white hover:text-black hover:border-black border-2 border-transparent"
+            whileHover={{ scale: 1.07, backgroundColor: "#fff", color: "#000", border: "2px solid #000" }}
             whileTap={{ scale: 0.97 }}
           >
             Learn More

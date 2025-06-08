@@ -125,9 +125,10 @@ const Navbar = () => {
             scale: 1.08,
             backgroundColor: "#fff",
             color: "#000",
+            border: "2px solid #000"
           }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="bg-black text-white px-5 py-2 rounded-full font-medium shadow hover:bg-white hover:text-black transition-colors flex items-center gap-2 min-w-[110px] md:min-w-[120px] min-h-[36px] md:min-h-[40px] text-base md:text-lg"
+          className="bg-black text-white px-5 py-2 rounded-full font-medium shadow hover:bg-white hover:text-black hover:border-black transition-colors flex items-center gap-2 min-w-[110px] md:min-w-[120px] min-h-[36px] md:min-h-[40px] text-base md:text-lg border-2 border-transparent"
         >
           Get Start
           <motion.span
