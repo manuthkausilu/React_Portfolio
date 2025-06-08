@@ -95,20 +95,15 @@ export default function Hero() {
   return (
     <>
       <Helmet>
-        <title>Manuth Kausilu | Software Engineer & Full Stack Developer</title>
-        <meta name="description" content="Manuth Kausilu - Software Engineer & Full Stack Developer based in Sri Lanka. I build modern, scalable web applications and deliver elegant solutions to complex problems." />
-        <meta name="keywords" content="Manuth Kausilu, Software Engineer, Full Stack Developer, Sri Lanka, Web Development, Portfolio, React, JavaScript, Freelance" />
-        <meta name="author" content="Manuth Kausilu" />
-        <meta property="og:title" content="Manuth Kausilu | Software Engineer & Full Stack Developer" />
-        <meta property="og:description" content="I build modern, scalable web applications and deliver elegant solutions to complex problems. Let's create something amazing together!" />
+        <title>Manuth Kausilu</title>
+        <meta name="description" content="Manuth Kausilu - Software Engineer & Full Stack Developer. Explore my portfolio, projects, and professional journey." />
+        <meta property="og:title" content="Manuth Kausilu" />
+        <meta property="og:site_name" content="Manuth Kausilu" />
+        <meta property="og:description" content="Manuth Kausilu - Software Engineer & Full Stack Developer. Explore my portfolio, projects, and professional journey." />
+        <meta property="og:url" content="https://manuthkausilu.me/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/logo.webp" />
-        <meta property="og:url" content="https://your-portfolio-url.com/" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Manuth Kausilu | Software Engineer & Full Stack Developer" />
-        <meta name="twitter:description" content="I build modern, scalable web applications and deliver elegant solutions to complex problems." />
-        <meta name="twitter:image" content="/logo.webp" />
-        <html lang="en" />
+        <link rel="canonical" href="https://manuthkausilu.me/" />
       </Helmet>
       <section
         className="relative min-h-screen flex flex-col justify-center items-center text-center px-2 sm:px-4 pt-0 w-full"
