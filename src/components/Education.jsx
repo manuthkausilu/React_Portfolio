@@ -84,7 +84,7 @@ const Education = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Education | Manuth Kausilu</title>
+				<title>Manuth Kausilu</title>
 				<meta
 					name="description"
 					content="Explore the academic background and learning journey of Manuth Kausilu, including university, bootcamps, and key milestones."
@@ -93,7 +93,7 @@ const Education = () => {
 					name="keywords"
 					content="Education, Academic Journey, Manuth Kausilu, Computer Science, Bootcamp, Learning, Portfolio"
 				/>
-				<meta property="og:title" content="Education | Manuth Kausilu" />
+				<meta property="og:title" content="Manuth Kausilu" />
 				<meta
 					property="og:description"
 					content="Explore the academic background and learning journey of Manuth Kausilu, including university, bootcamps, and key milestones."
