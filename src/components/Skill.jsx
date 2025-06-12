@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaJava } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiTypescript, SiMysql, SiSpringboot, SiFigma, SiExpress, SiDocker } from "react-icons/si";
+import { SiTailwindcss, SiMongodb, SiTypescript, SiMysql, SiSpringboot, SiFigma, SiExpress, SiDocker, SiBootstrap } from "react-icons/si";
 
 const skills = [
   { name: "React", icon: <FaReact className="text-cyan-400" /> },
@@ -11,14 +11,24 @@ const skills = [
   { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
+  // { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
   { name: "MySQL", icon: <SiMysql className="text-blue-700" /> },
   { name: "Java", icon: <FaJava className="text-red-600" /> },
   { name: "Spring Boot", icon: <SiSpringboot className="text-green-700" /> },
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-800" /> },
+  // { name: "Express.js", icon: <SiExpress className="text-gray-800" /> },
   { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+  { name: "Bootstrap", icon: <SiBootstrap className="text-purple-700" /> },
+  { 
+    name: "JavaFX", 
+    icon: (
+      <svg className="text-blue-900" width="1.6em" height="1.6em" viewBox="0 0 32 32" fill="currentColor">
+        <ellipse cx="16" cy="16" rx="14" ry="7" fill="currentColor" opacity="0.2"/>
+        <path d="M16 6c-2.5 3.5-6 7-6 10a6 6 0 0012 0c0-3-3.5-6.5-6-10z" fill="currentColor"/>
+      </svg>
+    )
+  },
 ];
 
 const Skill = () => {
@@ -50,7 +60,7 @@ const Skill = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
         {skills.map((skill, idx) => (
           <motion.div
-            key={skill.name}
+            key={skill.name + '-' + idx}
             className="flex flex-col items-center justify-center bg-white/90 rounded-2xl shadow-xl border border-gray-200 p-6 hover:scale-110 hover:shadow-2xl transition-transform duration-300 group"
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
