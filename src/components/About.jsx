@@ -10,11 +10,12 @@ const techServices = [
   "UI/UX Design",
   "API Integration",
   "Cloud Deployment",
-  "Mobile Apps",
+  // "Mobile Apps",
   "E-Commerce",
-  "SEO Optimization",
-  "Automation",
-  "AI Solutions",
+  "POS Systems",
+  // "SEO Optimization",
+  // "Automation",
+  // "AI Solutions",
 ];
 
 function About() {
