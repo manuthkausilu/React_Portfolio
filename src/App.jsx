@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Education from './components/Education'
 import Skill from './components/Skill'
+import Project from './components/Project' // <-- Add this import
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -26,6 +27,9 @@ function App() {
         </div>
         <div id="skill" className="relative z-10 pt-[88px]">
           <Skill />
+        </div>
+        <div id="projects" className="relative z-10 pt-[88px]">
+          <Project />
         </div>
         <div id="contact" className="relative z-10 pt-[88px]">
           <Contact />
