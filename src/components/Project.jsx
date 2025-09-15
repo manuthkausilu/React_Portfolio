@@ -7,8 +7,16 @@ const projects = [
     title: "Sekai Academy – Learning Management System",
     description:
       "Developed a full stack web platform for online course management and student engagement. Implemented PayHere test mode integration for secure course purchasing. Enabled role-based access for students and admins.",
-    tech: ["Java", "Spring Boot", "Hibernate", "MySQL", "HTML", "CSS", "JavaScript", "jQuery"],
+    tech: ["Java", "Spring Boot", "MySQL", "HTML", "CSS", "JavaScript", "jQuery"],
     github: "https://github.com/manuthkausilu/springboot-LMS.git",
+    demo: "#",
+  },
+  {
+    title: "Point of Sale (POS) System - Freelance Project",
+    description:
+      " Developed a desktop-based POS System using Spring Boot (backend) and React (frontend), packaged withElectron for cross-platform deployment. The system handles product management, billing, sales tracking,and customer management, ensuring smooth and efficient business operations. Implemented RESTfulAPIs, secure authentication, and a responsive UI, providing a seamless user experience for desktopenvironments.",
+    tech: ["Java", "Spring Boot", "MySQL", "React", "Electron", "JavaScript"],
+    github: "#",
     demo: "#",
   },
   {
