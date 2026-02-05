@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaJava } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiTypescript, SiMysql, SiSpringboot, SiFigma, SiExpress, SiDocker, SiBootstrap } from "react-icons/si";
+import { SiTailwindcss, SiMongodb, SiTypescript, SiMysql, SiPostgresql, SiSpringboot, SiFigma, SiExpress, SiPhp, SiLaravel, SiDocker, SiBootstrap } from "react-icons/si";
 
 const skills = [
   { name: "React", icon: <FaReact className="text-cyan-400" /> },
@@ -14,10 +14,13 @@ const skills = [
   { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
   { name: "MySQL", icon: <SiMysql className="text-blue-700" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
   { name: "Java", icon: <FaJava className="text-red-600" /> },
   { name: "Spring Boot", icon: <SiSpringboot className="text-green-700" /> },
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
   { name: "Express.js", icon: <SiExpress className="text-gray-800" /> },
+  { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
+  { name: "Laravel", icon: <SiLaravel className="text-red-600" /> },
   { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
   { name: "Bootstrap", icon: <SiBootstrap className="text-purple-700" /> },
   { 
