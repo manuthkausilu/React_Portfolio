@@ -11,6 +11,8 @@ import pos6 from "../assets/pos6.webp";
 import aboutImg from "../assets/about1.0.png";
 import reactLogo from "../assets/react.svg";
 import brightmark from "../assets/brightmarkweb.webp";
+import portfolio from "../assets/portfolio.webp";
+import pos from "../assets/pos.webp";
 
 const projects = [
   {
@@ -19,7 +21,7 @@ const projects = [
       " Developed a desktop-based POS System using Spring Boot (backend) and React (frontend), packaged withElectron for cross-platform deployment. The system handles product management, billing, sales tracking,and customer management, ensuring smooth and efficient business operations. Implemented RESTfulAPIs, secure authentication, and a responsive UI, providing a seamless user experience for desktopenvironments.",
     tech: ["Java", "Spring Boot", "MySQL", "React", "Electron", "JavaScript"],
     github: "#",
-    images: [pos1, pos2, pos3, pos4, pos5, pos6],
+    images: [pos, pos1, pos2, pos3, pos4, pos5, pos6],
     demo: "#",
     category: "Freelance",
   },
@@ -42,22 +44,12 @@ const projects = [
     category: "Practice",
   },
   {
-    title: "E-Commerce Web Application (JavaEE & JSP)",
-    description:
-      "Developed a full-featured e-commerce web application using JavaEE, JSP, HTML, CSS, and Bootstrap. Implemented user authentication, product browsing with category filtering and search, shopping cart management, and order processing. Integrated an admin panel for managing products, categories, and orders.",
-    tech: ["JavaEE", "JSP", "HTML", "CSS", "Bootstrap", "JavaScript"],
-    github: "https://github.com/manuthkausilu/E-Commerce-Web-Application-.git",
-    images: [aboutImg, sekai, reactLogo],
-    demo: "#",
-    category: "Practice",
-  },
-  {
     title: "Smart Parking Management System – Backend",
     description:
       "A microservice-based backend system built with Spring Boot for managing smart vehicle parking operations. Includes services for user management, vehicle tracking, parking slot allocation, and payment handling. Implements JWT authentication, Spring Security, and RESTful APIs for scalable, secure communication.",
     tech: ["Spring Boot", "Java", "MySQL", "Spring Security", "JWT", "REST API" ,"Microservices"],
     github: "https://github.com/manuthkausilu/Smart-Parking-Management-System-BACKEND-.git",
-    images: [sekai],
+    images: [reactLogo],
     demo: "#",
     category: "Practice",
   },
@@ -67,7 +59,7 @@ const projects = [
       "A full-stack library management system built with React and Node.js for managing book lending operations. Includes modules for reader management, book cataloging, lending and return tracking, and overdue handling. Integrates Nodemailer for overdue notifications and secure JWT authentication.",
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Nodemailer"],
     github: "https://github.com/manuthkausilu/Book-Club-Library-Management-Web-Application.git",
-    images: [reactLogo, aboutImg],
+    images: [reactLogo],
     demo: "#",
     category: "Practice",
   },
@@ -76,7 +68,7 @@ const projects = [
     description: "A modern, responsive portfolio built with React, Tailwind CSS, and Framer Motion.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/manuthkausilu/React_Portfolio.git",
-    images: [reactLogo],
+    images: [portfolio],
     demo: "https://manuthkausilu.me/",
     category: "Practice",
   },
