@@ -10,7 +10,7 @@ const techServices = [
   "UI/UX Design",
   "API Integration",
   "Cloud Deployment",
-  // "Mobile Apps",
+  "Mobile Apps",
   "E-Commerce",
   "POS Systems",
   // "SEO Optimization",
