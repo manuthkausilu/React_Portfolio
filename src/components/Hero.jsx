@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiFolder, FiMail } from "react-icons/fi";
 import { Helmet } from "react-helmet";
-import bg3 from "../assets/videos/bg4.mp4";
 
 export default function Hero() {
   const [hovered, setHovered] = useState(null);
   const [currentTime, setCurrentTime] = useState("");
   const [loading, setLoading] = useState(true);
+
+  // Replace local video import with a CDN URL. Update this to your actual CDN path.
+  const bgVideoUrl = "https://res.cloudinary.com/dsb9s1tm3/video/upload/q_auto,f_auto/v1770314708/bg4_ad2rxk.mp4";
 
   useEffect(() => {
     const updateTime = () => {
@@ -119,7 +121,7 @@ export default function Hero() {
           preload="auto" // <--- Add this attribute for faster loading
           poster="/placeholder.jpg" // <--- Optional: add a lightweight placeholder image in public/
         >
-          <source src={bg3} type="video/mp4" />
+          <source src={bgVideoUrl} type="video/mp4" />
         </video>
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
