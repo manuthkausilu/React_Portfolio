@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const educationData = [
 	{
-		degree: "Bachelor of Science in Computer Science",
+		degree: "Graduate Diploma in Software Engineering",
 		institution: "IJSE | Institute of Software Engineering",
 		period: "2023 - Present",
 		icon: (
